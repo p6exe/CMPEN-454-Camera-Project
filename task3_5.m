@@ -3,6 +3,7 @@ fprintf('--- Task 3.5 ---\n');
 addpath('helpers');
 
 cam_params = load('data/camera_params.mat');
+
 Image1 = imread('data/im1corrected.jpg'); 
 Image2 = imread('data/im2corrected.jpg');
 
@@ -24,8 +25,8 @@ fprintf('Essential Matrix E:\n');
 disp(E);
 
 %% Step 3: Compute Fundamental Matrix
-K1 = cam1.K;
-K2 = cam2.K;
+K1 = cam_params.K1;
+K2 = cam_params.K2;
 F = inv(K2') * E * inv(K1);
 
 fprintf('Fundamental Matrix F:\n');
