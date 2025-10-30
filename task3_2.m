@@ -28,10 +28,10 @@ xy2 = xy(mask',:);
 % Visualize
 figure; imshow(Image1); hold on; plot(xy1(:,1),xy1(:,2),'r.','MarkerSize',12);
 title('Task 3.2: Projected mocap points (View 1)'); hold off;
-saveas(gcf, fullfile(outDir,'t3_2_proj_view1.png')); close;
+save('outputs/t3_2_proj_view1.png');
 figure; imshow(Image2); hold on; plot(xy2(:,1),xy2(:,2),'r.','MarkerSize',12);
 title('Task 3.2: Projected mocap points (View 2)'); hold off;
-saveas(gcf, fullfile(outDir,'t3_2_proj_view2.png')); close;
+save('outputs/t3_2_proj_view2.png');
 
 % Save data for later tasks
 save('data\2d_points.mat', 'xy1','xy2','X');
