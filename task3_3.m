@@ -30,4 +30,4 @@ figure; plot3(X(:,1),X(:,2),X(:,3),'k.'); hold on;
 plot3(Xrec(:,1),Xrec(:,2),Xrec(:,3),'ro');
 grid on; axis equal;
 title('Task 3.3: Triangluated 3D points');
-saveas(gcf, fullfile(outDir,'t3_3_3d_compare.png'));
+saveas(gcf, 'outputs/t3_3_3d_compare.png');
