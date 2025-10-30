@@ -37,12 +37,12 @@ xy2 = xy(mask',:);
 figure; imshow(Image1c); hold on; 
 plot(xy1(:,1),xy1(:,2),'r.'); 
 title('Projection on cropped Image 1'); 
-saveas(gcf, fullfile(outDir,'ec1_proj_cropped_1.png'));
+saveas(gcf, 'outputs/ec1_proj_cropped_1.png');
 
 figure; imshow(Image2c); hold on; 
 plot(xy2(:,1),xy2(:,2),'r.'); 
 title('Projection on cropped Image 2'); 
-saveas(gcf, fullfile(outDir,'ec1_proj_cropped_2.png'));
+saveas(gcf, 'outputs/ec1_proj_cropped_2.png');
 
 F = eightpoint(Image1c,Image2c,xy1,xy2);
 %save(fullfile(outDir,'extra_credit1_results.mat'),'rect1','rect2','K1c','K2c','Fc','Ec','Rrel','trel');
